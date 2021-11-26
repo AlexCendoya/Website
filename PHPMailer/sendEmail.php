@@ -13,7 +13,7 @@
         require "php/PHPMailer.php";
         require "php/SMTP.php";
         require "php/Exception.php";
-
+        
         //Create a new PHPMailer instance
         $mail = new PHPMailer();
 
@@ -82,18 +82,15 @@
 
         //send the message, check for errors
         if (!$mail->send()) {
-            echo 'Mailer Error: ' . $mail->ErrorInfo;
+            echo json_encode( 'Mailer Error: ' . $mail->ErrorInfo );
         } else {
-            echo 'Message sent!';
+            echo json_encode('Message sent!');
             //Section 2: IMAP
             //Uncomment these to save your message in the 'Sent Mail' folder.
             #if (save_mail($mail)) {
             #    echo "Message saved!";
             #}
         }
-
-
-
 
     }
 ?>

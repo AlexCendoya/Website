@@ -18,7 +18,7 @@ $('#submitButton').click(function() {
                 body: body.val()
             }, success: function (response) {
 
-                console.log(response);
+                console.log("The response is: " + response);
                 
                 $('#messageConfirmation').html("<div class='alert alert-success' role='alert'>Your message was succesfully sent! </div>");
 
