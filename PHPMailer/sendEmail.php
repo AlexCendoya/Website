@@ -59,7 +59,7 @@
 
         //Set an alternative reply-to address
         //This is a good place to put user-submitted addresses
-        $mail->addReplyTo('cendo15@hotmail.com', 'Alex Cendoya');
+        $mail->addReplyTo($email, $name);
 
         //Set who the message is to be sent to
         $mail->addAddress('kalamaresbravos@gmail.com', 'Alex Cendoya');

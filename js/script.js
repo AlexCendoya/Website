@@ -1,5 +1,7 @@
 $('#submitButton').click(function() {
 
+    $("#preloader").fadeIn('slow');
+    
     var name = $("#name");
     var email = $("#email");
     var subject = $("#subject");
@@ -19,6 +21,8 @@ $('#submitButton').click(function() {
             }, success: function (response) {
 
                 console.log("The response is: " + response);
+
+                $("#preloader").fadeOut('slow');
                 
                 $('#messageConfirmation').html("<div class='alert alert-success' role='alert'>Your message was succesfully sent! </div>");
 

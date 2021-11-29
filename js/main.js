@@ -187,15 +187,15 @@
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 20
+        spaceBetween: 5
       },
       768: {
         slidesPerView: 2,
-        spaceBetween: 20
+        spaceBetween: 5
       },
       1200: {
         slidesPerView: 4,
-        spaceBetween: 20
+        spaceBetween: 5
       }
     }
   });
@@ -252,5 +252,7 @@
       clickable: true
     }
   });
+
+  $("#preloader").fadeOut('slow');
 
 })()
